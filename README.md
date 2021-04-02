@@ -1,2 +1,1 @@
-# justin-bieber-website-close
-Justin Bieber website clone build with html, css and js
+<h1 align="center">Justin Bieber Website Clone</h1>
