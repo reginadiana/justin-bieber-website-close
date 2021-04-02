@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
   /* font-family: 'Playfair Display', serif; */
   /* font-family: 'Open Sans', sans-serif; */
 }

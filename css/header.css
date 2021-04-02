@@ -1,0 +1,56 @@
+/* Mobile Version */
+
+/* Header */
+header {
+  display: flex;
+  font-family: "Open Sans", serif;
+}
+
+.open {
+  display: block;
+}
+
+.close {
+  display: none;
+}
+
+/* Top Menu */
+
+.menu__top__icons {
+  display: none;
+}
+
+.icon {
+  width: 25px;
+}
+
+/* Aside menu */
+
+.menu__left {
+  background-color: var(--black);
+  height: 100vh;
+  width: 100vh;
+}
+
+.menu__nav__icons_left ul {
+  display: flex;
+}
+
+/* Tablet Version */
+
+@media (min-width: 720px) {
+  /* Header */
+
+  .menu__left, .menu__open {
+    display: none;
+  }
+
+  .menu__top {
+    display: flex;
+  }
+
+  /* Top Menu */
+  .menu__top__icons {
+    display: flex;
+  }
+}
