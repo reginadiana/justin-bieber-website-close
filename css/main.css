@@ -1,22 +1,65 @@
-.container__main {
+.container__main.open {
   display: flex;
+}
+
+.container__main {
   justify-content: center;
 }
 
 /* Albumns */
 .container__albums__list {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(1, 200px);
+  gap: 15px;
+  margin-top: 100px;
 }
 
-.container__albums__list div {
+.container__albums__list .album {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.container__albums__list .album:hover {
+  background-color: rgba(17,17,17,.9);
+  transition: 0.5s;
+}
+
+.container__albums__list .album:hover .album__info {
+  visibility: visible;
 }
 
 .container__albums__list img {
-  width: 50%;
-  margin-top: 25px;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Info Album */
+.album__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-50%);
+  width: 80%;
+}
+
+.album__info h3 {
+  text-align: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.album__info button {
+  color: white;
+  display: flex;
+  margin: auto;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  cursor: pointer;
 }
 
 .container__music__background,
@@ -27,13 +70,28 @@
 /* Load More */
 .load__more {
   text-align: center;
-  margin: 25px 0;
+  margin: 50px 0;
 }
 
 .load__more button {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
   border-bottom: 1px solid black;
+}
+
+/* IPhone */
+@media (min-width: 375px) {
+  .container__albums__list {
+    grid-template-columns: repeat(2, 160px);
+  }
+}
+
+/* IPad */
+@media (min-width: 620px) {
+  .container__albums__list {
+    grid-template-columns: repeat(3, 150px);
+  }
 }
 
 /* Tablet Version */
@@ -41,11 +99,7 @@
 @media (min-width: 1024px) {
   /* Albumns */
   .container__albums__list {
-    grid-template-columns: repeat(3, 300px);
-  }
-
-  .container__albums__list img {
-    width: 250px;
+    grid-template-columns: repeat(4, 200px);
   }
 
   /* Background Title */
@@ -84,5 +138,14 @@
 
   .main__menu__nav__right li:first-child a {
     border-left: 1px solid black;
+  }
+}
+
+/* Desktop Version */
+
+@media (min-width: 1370px) {
+  /* Albumns */
+  .container__albums__list {
+    grid-template-columns: repeat(4, 300px);
   }
 }
