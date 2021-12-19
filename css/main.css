@@ -136,7 +136,7 @@
     font-size: 20px;
   }
 
-  .main__menu__nav__right li:first-child a {
+  .main__menu__nav__right .active {
     border-left: 1px solid black;
   }
 }
