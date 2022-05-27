@@ -28,6 +28,9 @@ header {
   align-items: center;
   padding: 15px;
   position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  background-color: var(--white);
 }
 
 .menu__open {
@@ -42,6 +45,7 @@ header {
 
 .site__name a {
   color: var(--black);
+  letter-spacing: 20px;
 }
 
 /* Aside menu */
@@ -101,11 +105,6 @@ header {
 
   .menu__top, .menu__top__icons {
     display: flex;
-  }
-
-  .menu__top.open {
-    width: 100%;
-    justify-content: space-between;
   }
 
   .menu__top__nav__icons li:not(:first-child) {
